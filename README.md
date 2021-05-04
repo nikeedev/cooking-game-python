@@ -1,4 +1,7 @@
-# cooking-game
+Cooking game, v.0.4, Market Update and Public pre-release!
+
+
+
 Cook food in python console!
 This game is so cool!
 
