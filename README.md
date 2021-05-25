@@ -1,14 +1,19 @@
 Cooking game, v.0.4, Market Update and Public pre-release!
 
+\\
 
+
+Requirements:
+Device that supports Python 3.9.x(Some of code may not work good on older version, so install new one)
+Python 3.9 and later
+
+
+//
 
 Cook food in python console!
 This game is so cool!
 
 Install instructions:
 
-Download code from GitHub(basically here), then unzip it, open "dist" folder and open .exe file called cooking_game.exe, Happy cooking!
+Download code from GitHub(basically here), then just start and have fun!, Happy cooking!
 
-
-ask owner(discord: nikegamerjjjj#8874) to get py file if you want.
-(it is not guaranteed that you will get it)
