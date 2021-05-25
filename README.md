@@ -1,12 +1,12 @@
 Cooking game, v.0.4, Market Update and Public pre-release!
 
-\\\
+//
 
 
 Requirements:
 Device that supports Python 3.9.x(Some of code may not work good on older version, so install new one)
 Python 3.9 and later
-
+Download: https://www.python.org/downloads/
 
 //
 
