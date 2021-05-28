@@ -229,6 +229,7 @@ while True:
                     sell_soup_answer = input("Write yes or no...")
                     if "yes" in sell_soup_answer:
                         print("Selling soup!")
+                        soup += 1
                         time.sleep(2)
                         print("You got 25 coins")
                         coins += 25
