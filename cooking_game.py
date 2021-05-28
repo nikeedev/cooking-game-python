@@ -54,7 +54,7 @@ def print_pause():
     print(" ")
     print(" ")
     print(" ")
-    print
+    print(" ")
 water_enough = False
 potato_enough = False
 carrot_enough = False
@@ -81,12 +81,6 @@ print("But we should have it enough to make some Soup!")
 input("click ENTER to continue...")
 
 while True:
-    print("List of Coammands:      ")
-    print("                   Recipes")
-    print("                   Inventory")
-    print("                   Make something")
-    print("                   Market(Sell and Buy food)")
-    command = input("                   ")
     if water < 0:
         water = 0
     if potato < 0:
@@ -95,11 +89,18 @@ while True:
         carrot = 0
     if coins < 0:
         coins = 0
-    #if meat_achivement == False:
-    #   if soup == 1:
-    #        meat_achivement = True
-    #       print("You got Meat achievement meaning you can have meat, in inventory")
-    #        meat_packages += 20
+    if meat_achivement == False:
+       if soup == 2:
+            meat_achivement = True
+            print("You got Meat achievement meaning you can have meat, in inventory now!")
+            meat_packages += 20
+
+    print("List of Coammands:      ")
+    print("                   Recipes")
+    print("                   Inventory")
+    print("                   Make something")
+    print("                   Market(Sell and Buy food)")
+    command = input("                   ")
 
     if "recipe" in command:
         print_pause()
@@ -109,6 +110,12 @@ while True:
         print("                         Water: 10 Desiliters")
         print("                         Potato: 200 grams")
         print("                         Carrots: 3")
+        print("                         ")
+        print("                   Soup With Meatballs:")
+        print("                         Water: 12 Desiliters")
+        print("                         Potato: 200 grams")
+        print("                         Carrots: 3")
+        print("                         Meat Packages: 2")
     if "inventory" in command:
         print_pause()
         print("                   You have ", water, " desiliters of water")
@@ -116,13 +123,14 @@ while True:
         print("                   You have ", carrot, " carrots")
         print("                   You have ", soup, "soup")
         print("                   You have ", coins, "coins")
-        #if meat_achivement == True:
-        #           print("                   You have ", meat_packages, "meat packages")
+        if meat_achivement == True:
+            print("                   You have ", meat_packages, "meat packages")
         print("                   Tip: If you have small amount of required amount of ingredients, you won't be able to make food!")
     if "make something" in command:
         print_pause()
         print("                   Write name of any food above:")
         print("                   Soup")
+        print("                   Soup With Meatballs")
         make_something = input("                   ")
         if make_something == "soup":
             print("In order to make Soup, you need self write in amounts of ingrendients. If you don't remember you must check recipes!")
