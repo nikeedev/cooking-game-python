@@ -2,59 +2,60 @@ print("Loading all needed things, please show patient :)")
 import random#temporally
 print("...")
 import time
-def print_pause():
-    print(" ")
-    print(" ")
-    print(" ")
-    print(" ")
-    print(" ")
-    print(" ")
-    print(" ")
-    print(" ")
-    print(" ")
-    print(" ")
-    print(" ")
-    print(" ")
-    print(" ")
-    print(" ")
-    print(" ")
-    print(" ")
-    print(" ")
-    print(" ")
-    print(" ")
-    print(" ")
-    print(" ")
-    print(" ")
-    print(" ")
-    print(" ")
-    print(" ")
-    print(" ")
-    print(" ")
-    print(" ")
-    print(" ")
-    print(" ")
-    print(" ")
-    print(" ")
-    print(" ")
-    print(" ")
-    print(" ")
-    print(" ")
-    print(" ")
-    print(" ")
-    print(" ")
-    print(" ")
-    print(" ")
-    print(" ")
-    print(" ")
-    print(" ")
-    print(" ")
-    print(" ")
-    print(" ")
-    print(" ")
-    print(" ")
-    print(" ")
-    print(" ")
-    print(" ")
+def print_pause(times):
+    for x in range(times):
+        print(" ")
+        print(" ")
+        print(" ")
+        print(" ")
+        print(" ")
+        print(" ")
+        print(" ")
+        print(" ")
+        print(" ")
+        print(" ")
+        print(" ")
+        print(" ")
+        print(" ")
+        print(" ")
+        print(" ")
+        print(" ")
+        print(" ")
+        print(" ")
+        print(" ")
+        print(" ")
+        print(" ")
+        print(" ")
+        print(" ")
+        print(" ")
+        print(" ")
+        print(" ")
+        print(" ")
+        print(" ")
+        print(" ")
+        print(" ")
+        print(" ")
+        print(" ")
+        print(" ")
+        print(" ")
+        print(" ")
+        print(" ")
+        print(" ")
+        print(" ")
+        print(" ")
+        print(" ")
+        print(" ")
+        print(" ")
+        print(" ")
+        print(" ")
+        print(" ")
+        print(" ")
+        print(" ")
+        print(" ")
+        print(" ")
+        print(" ")
+        print(" ")
+        print(" ")
 water_enough = False
 potato_enough = False
 carrot_enough = False
@@ -68,7 +69,7 @@ meat_achivement = False
 soup = 0
 soup_with_meat = 0
 time.sleep(2)
-print("Hello and welcome to Cooking Game! v.0.4.1: Small Meat update(More coming soon!)!")
+print("Hello and welcome to Cooking Game! v.0.5: Meat update(more info in info command)!")
 input("click ENTER to continue...")
 print("What is your name or in this case nickname?")
 username = input("My nickname is... ")
@@ -95,17 +96,25 @@ while True:
         meat_packages = 0
     if meat_achivement == False:
        if soup == 2:
-            meat_achivement = True
-            print("You got Meat achievement, which means you can have meat in inventory, and you're able to make new Soup type!")
-            meat_packages += 20
+           print("")
+           print("")
+           print("")
+           meat_achivement = True
+           print("You got Meat achievement, which means you can have meat in inventory, and you're able to make new Soup type!")
+           meat_packages += 20
+           print("")
+           print("")
+           print("")
     print("List of Coammands:      ")
     print("                   Recipes")
     print("                   Inventory")
     print("                   Make something")
     print("                   Market(Sell and Buy food)")
+    print("                   Info")
+    print("                   Update Log")
     command = input("                   ")
     if "recipe" in command:
-        print_pause()
+        print_pause(1)
         print("                   Current Recipes:")
         print("                   ")
         print("                   Soup:")
@@ -119,7 +128,7 @@ while True:
         print("                         Carrots: 3")
         print("                         Meat Packages: 2")
     if "inventory" in command:
-        print_pause()
+        print_pause(1)
         print("                   You have ", water, " desiliters of water")
         print("                   You have ", potato, " grams of potato")
         print("                   You have ", carrot, " carrots")
@@ -130,7 +139,7 @@ while True:
             print("                   You have ", meat_packages, "meat packages")
         print("                   Tip: If you have small amount of required amount of ingredients, you won't be able to make food!")
     if "make something" in command:
-        print_pause()
+        print_pause(1)
         print("                   Write name of any food above:")
         print("                   Soup")
         print("                   Soup With Meatballs")
@@ -195,7 +204,7 @@ while True:
             carrot_enough = False
             meat_enough = False
     if "market" in command:
-        print_pause()
+        print_pause(1)
         print("Welcome to The Market!")
         time.sleep(2)
         print("Here, can you buy and sell things, such like food.")
@@ -210,22 +219,23 @@ while True:
         if "exit" in market_commands:
             continue
         if "sell" in market_commands:
-            if soup < 0:
+            if soup < 0 or soup_with_meat < 0:
                 print("You dont have anything to sell, redirecting back in 3 sec")
                 time.sleep(3)
                 continue
-            elif soup > 0:
+            elif soup > 0 or soup_with_meat > 0:
                 print("You can sell only food you made.")
                 time.sleep(2)
-                print("Prices on foods change after time(update), so be in right time to get much coins!")
+                print("Prices on foods change after time(after updates), so be in right time to get much coins!")
                 time.sleep(3)
                 print("You can sell ", soup, " soup.")
+                print("You can sell ", soup_with_meat, " soup with meatballs.")
                 time.sleep(2)
                 print("If you want to sell write: name of food you want to sell.")
                 sell_command = input()
                 if "soup" in sell_command:
                     print("One soup costs: 25 coins")
-                    print("Want to sell 1 one soup for current price? If not, you will be redirected back to main commands!")
+                    print("Want to sell 1 soup for current price? If not, you will be redirected back to main commands!")
                     sell_soup_answer = input("Write yes or no...")
                     if "yes" in sell_soup_answer:
                         print("Selling soup!")
@@ -233,6 +243,17 @@ while True:
                         time.sleep(2)
                         print("You got 25 coins")
                         coins += 25
+                elif "soup with meatballs" in sell_command:
+                    print("One soup with meatballs costs: 30 coins")
+                    print("Want to sell 1 soup with meatballs for current price?")
+                    print("If not, you will be redirected back to main commands!")
+                    sell_soup_answer = input("Write yes or no...")
+                    if "yes" in sell_soup_answer:
+                        print("Selling soup!")
+                        soup_with_meat -= 1
+                        time.sleep(2)
+                        print("You got 30 coins")
+                        coins += 30
         if "buy" in market_commands:
             if coins == 0:
                 print("You dont have enough money! Leaving Market in 2 sec.")
@@ -264,6 +285,40 @@ while True:
                     carrot += 6
                     coins -= 7
 
+    elif "info" in command:
+        print_pause(10)
+        print("Cooking Game®")
+        print("Made by Nikegamerjjjj(Nikita)")
+        print("Copyright ©2021")
+        print("This game is made completly by hand, and no turtorials have been used.")
+        print("Game have abilty to be changed, but without asking owner(nikegamerjjjj),")
+        print("you are not following rules and may cause in problems.")
+        print(" ")
+        print(" ")
+        print(" ")
+        print(" ")
+        print(" ")
+        print("Contact Me here:")
+        print("Discord(Spamming may cause blocking your user): nikegamerjjjj#8874")
+        print("Github: Nikegamerjjjj")
+        print("")
+
+
+
+    elif "update" in command or "log" in command:
+        print("Update: Meat update! ")
+        print("")
+        print("Version: v.0.5")
+        print("")
+        print("New:")
+        print("")
+        print("Added Meat back!")
+        print("Added Soup with Meatballs, in recipes now!")
+        print("Bug fixes from issues")
+        print("Added abilty to Sell Soup with Meatballs.")
+        print("")
+        print("")
+        print("")
 
 
     else:
