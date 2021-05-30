@@ -17,6 +17,6 @@ Install instructions:
 
 Download code from GitHub(basically here), then just start and have fun!, Happy cooking!
 
-Info and update log can be seen by writing command info or update or log inside the game.
+Info and update log can be seen by writing command "info" or "update" or "log" inside the game.
 
 Nikegamerjjjj
