@@ -105,7 +105,7 @@ while True:
            print("")
            print("")
     print("")
-    print("Hello,", username, "! What do you want to do now?")
+    print("Hello, " + username + " ! What do you want to do now?")
     print("List of Coammands:      ")
     print("                   Recipes")
     print("                   Inventory")
@@ -123,18 +123,20 @@ while True:
         print("                         Potato: 200 grams")
         print("                         Carrots: 3")
         print("                         ")
-        print("                   Soup With Meatballs:")
-        print("                         Water: 12 Desiliters")
-        print("                         Potato: 200 grams")
-        print("                         Carrots: 3")
-        print("                         Meat Packages: 2")
+        if meat_achivement == True:
+            print("                   Soup With Meatballs:")
+            print("                         Water: 12 Desiliters")
+            print("                         Potato: 200 grams")
+            print("                         Carrots: 3")
+            print("                         Meat Packages: 2")
     if "inventory" in command:
         print_pause()
         print("                   You have ", water, " desiliters of water")
         print("                   You have ", potato, " grams of potato")
         print("                   You have ", carrot, " carrots")
         print("                   You have ", soup, "soup")
-        print("                   You have ", soup_with_meat, "soup with meatballs")
+        if meat_achivement == True:
+            print("                   You have ", soup_with_meat, "soup with meatballs")
         print("                   You have ", coins, "coins")
         if meat_achivement == True:
             print("                   You have ", meat_packages, "meat packages")
@@ -143,7 +145,8 @@ while True:
         print_pause()
         print("                   Write name of any food above:")
         print("                   Soup")
-        print("                   Soup With Meatballs")
+        if meat_achivement == True:
+            print("                   Soup With Meatballs")
         make_something = input("                   ")
         if make_something == "soup":
             print("In order to make Soup, you need self write in amounts of ingrendients. If you don't remember you must check recipes!")
@@ -171,39 +174,39 @@ while True:
             water_enough = False
             potato_enough = False
             carrot_enough = False
-        
-        elif make_something == "soup with meat":
-            print("In order to make Soup with Meatballs, you need self write in amounts of ingrendients. If you don't remember you must check recipes!")
-            soup_water = int(input("Write desiliters of water you want to add: "))
-            soup_potato = int(input("Write grams of potatoes you want to add: "))
-            soup_carrot = int(input("Write amount of carrot(s) you want to add: "))
-            soup_meat = int(input("Write amount of meat packages you want to add: "))
-            if soup_water >= 12:
-                water = water - soup_water
-                water_enough = True
-            if soup_potato >= 200:
-                potato = potato - soup_potato
-                potato_enough = True
-            if soup_carrot >= 3:
-                carrot = carrot - soup_carrot
-                carrot_enough = True
-            if soup_meat >= 2:
-                meat_packages = meat_packages - soup_meat
-                meat_enough = True
-            if water_enough == True and potato_enough == True and carrot_enough == True and meat_enough == True:
-                print("Yeah! All ingredients is here! You succesfully made some Soup!")
-                print("- You got 1 Soup with Meatballs! It lies in inventory now -")
-                soup_with_meat += 1
-            else:
-                print("You can't make soup, because you dont have enough ingredients!")
-                print("You have now " + water + " dl of water, instead of 12 desiliters!")
-                print("You have now " + potato + " grams of potatoes, instead of 200 grams!")
-                print("You have now " + carrot + " sticks of carrots, instead of 3 carrots!")
-                print("You have now " + meat_packages + " meat packages, instead of 2 packages")
-            water_enough = False
-            potato_enough = False
-            carrot_enough = False
-            meat_enough = False
+        elif meat_achivement == True:
+            if make_something == "soup with meat":
+                print("In order to make Soup with Meatballs, you need self write in amounts of ingrendients. If you don't remember you must check recipes!")
+                soup_water = int(input("Write desiliters of water you want to add: "))
+                soup_potato = int(input("Write grams of potatoes you want to add: "))
+                soup_carrot = int(input("Write amount of carrot(s) you want to add: "))
+                soup_meat = int(input("Write amount of meat packages you want to add: "))
+                if soup_water >= 12:
+                    water = water - soup_water
+                    water_enough = True
+                if soup_potato >= 200:
+                    potato = potato - soup_potato
+                    potato_enough = True
+                if soup_carrot >= 3:
+                    carrot = carrot - soup_carrot
+                    carrot_enough = True
+                if soup_meat >= 2:
+                    meat_packages = meat_packages - soup_meat
+                    meat_enough = True
+                if water_enough == True and potato_enough == True and carrot_enough == True and meat_enough == True:
+                    print("Yeah! All ingredients is here! You succesfully made some Soup!")
+                    print("- You got 1 Soup with Meatballs! It lies in inventory now -")
+                    soup_with_meat += 1
+                else:
+                    print("You can't make soup, because you dont have enough ingredients!")
+                    print("You have now " + water + " dl of water, instead of 12 desiliters!")
+                    print("You have now " + potato + " grams of potatoes, instead of 200 grams!")
+                    print("You have now " + carrot + " sticks of carrots, instead of 3 carrots!")
+                    print("You have now " + meat_packages + " meat packages, instead of 2 packages")
+                water_enough = False
+                potato_enough = False
+                carrot_enough = False
+                meat_enough = False
     if "market" in command:
         print_pause()
         print("Welcome to The Market!")
@@ -313,6 +316,7 @@ while True:
 
 
     elif "update" in command or "log" in command:
+        print_pause()
         print("Update: Meat update! ")
         print("")
         print("Version: v.0.5")
