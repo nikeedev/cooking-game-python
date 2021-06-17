@@ -301,7 +301,7 @@ while True:
         print("Made by Nikegamerjjjj(Nikita)")
         print("Copyright ©2021")
         print("This game is made completly by hand, and no turtorials have been used.")
-        print("Game have abilty to be changed, but without asking owner(nikegamerjjjj),")
+        print("Game code can be changed, but without asking owner(nikegamerjjjj),")
         print("you are not following rules and may cause in problems.")
         print(" ")
         print(" ")
@@ -309,8 +309,8 @@ while True:
         print(" ")
         print(" ")
         print("Contact me here:")
-        print("Discord(Spamming may cause blocking your user): nikegamerjjjj#8874")
-        print("Github: Nikegamerjjjj")
+        print("Discord(Spamming me causes to block you from support): nikegamerjjjj#8874")
+        print("Github: Nikegamerjjjj(Use issue report function in repo)")
         print("")
 
 
