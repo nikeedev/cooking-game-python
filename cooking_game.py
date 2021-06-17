@@ -207,6 +207,8 @@ while True:
                 potato_enough = False
                 carrot_enough = False
                 meat_enough = False
+        else:
+            continue
     if "market" in command:
         print_pause()
         print("Welcome to The Market!")
