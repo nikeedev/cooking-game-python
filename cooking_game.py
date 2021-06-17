@@ -68,7 +68,7 @@ meat_achivement = False
 soup = 0
 soup_with_meat = 0
 time.sleep(2)
-print("Hello and welcome to Cooking Game! v.0.5: Meat update! (more info in info command)")
+print("Hello and welcome to Cooking Game! v.0.5.1: Meat update(+fixes for June)! (more info in info command)")
 input("click ENTER to continue...")
 print("What is your name or in this case nickname?")
 username = input("My nickname is... ")
@@ -333,6 +333,7 @@ while True:
         print("Bug fixes from issues")
         print("Added abilty to Sell Soup with Meatballs.")
         print("Added Meat to Buy section")
+        print("Fixes for this summer June 2021")
         print("")
         print("")
         print("")
