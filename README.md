@@ -1,4 +1,5 @@
-Cooking game, v.0.5, Meat Update!
+Cooking game
+
 
 //
 
