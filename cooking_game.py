@@ -270,13 +270,15 @@ while True:
                 print("Water, 20 desiliters: 10 coins")
                 print("Potato, 400 grams: 5 coins")
                 print("Carrots, 6 sticks: 7 coins")
-                print("Meat, 4 packages: 5 coins")
+                if meat_achivement == True:
+                    print("Meat, 4 packages: 5 coins")
                 time.sleep(3)
                 print("Write in commands below what you want to buy:")
                 print("Water")
                 print("Potato")
                 print("Carrot")
-                print("Meat")
+                if meat_achivement == True:
+                    print("Meat")
                 buy_commands = input()
                 if "water" in buy_commands:
                     print("Adding 20 desiliters, minus 10 coins")
@@ -290,10 +292,11 @@ while True:
                     print("Adding 6 carrots, minus 7 coins")
                     carrot += 6
                     coins -= 7
-                elif "meat" in buy_commands:
-                    print("Adding 4 meat packages, minus 5 coins")
-                    meat_packages += 4
-                    coins -= 5
+                if meat_achivement == True:    
+                    if "meat" in buy_commands:
+                        print("Adding 4 meat packages, minus 5 coins")
+                        meat_packages += 4
+                        coins -= 5
 
     elif "info" in command:
         print_pause()
