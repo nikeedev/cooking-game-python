@@ -68,7 +68,7 @@ meat_achivement = False
 soup = 0
 soup_with_meat = 0
 time.sleep(2)
-print("Hello and welcome to Cooking Game! v.0.5: Meat update! (more info in info command)")
+print("Hello and welcome to Cooking Game! v.0.5.1: Meat update(+ fixes for June)! (more info in info command)")
 input("click ENTER to continue...")
 print("What is your name or in this case nickname?")
 username = input("My nickname is... ")
@@ -207,6 +207,8 @@ while True:
                 potato_enough = False
                 carrot_enough = False
                 meat_enough = False
+        else:
+            continue
     if "market" in command:
         print_pause()
         print("Welcome to The Market!")
@@ -270,13 +272,15 @@ while True:
                 print("Water, 20 desiliters: 10 coins")
                 print("Potato, 400 grams: 5 coins")
                 print("Carrots, 6 sticks: 7 coins")
-                print("Meat, 4 packages: 5 coins")
+                if meat_achivement == True:
+                    print("Meat, 4 packages: 5 coins")
                 time.sleep(3)
                 print("Write in commands below what you want to buy:")
                 print("Water")
                 print("Potato")
                 print("Carrot")
-                print("Meat")
+                if meat_achivement == True:
+                    print("Meat")
                 buy_commands = input()
                 if "water" in buy_commands:
                     print("Adding 20 desiliters, minus 10 coins")
@@ -290,10 +294,11 @@ while True:
                     print("Adding 6 carrots, minus 7 coins")
                     carrot += 6
                     coins -= 7
-                elif "meat" in buy_commands:
-                    print("Adding 4 meat packages, minus 5 coins")
-                    meat_packages += 4
-                    coins -= 5
+                if meat_achivement == True:    
+                    if "meat" in buy_commands:
+                        print("Adding 4 meat packages, minus 5 coins")
+                        meat_packages += 4
+                        coins -= 5
 
     elif "info" in command:
         print_pause()
@@ -301,7 +306,7 @@ while True:
         print("Made by Nikegamerjjjj(Nikita)")
         print("Copyright ©2021")
         print("This game is made completly by hand, and no turtorials have been used.")
-        print("Game have abilty to be changed, but without asking owner(nikegamerjjjj),")
+        print("Game code can be changed, but without asking owner(nikegamerjjjj),")
         print("you are not following rules and may cause in problems.")
         print(" ")
         print(" ")
@@ -309,8 +314,8 @@ while True:
         print(" ")
         print(" ")
         print("Contact me here:")
-        print("Discord(Spamming may cause blocking your user): nikegamerjjjj#8874")
-        print("Github: Nikegamerjjjj")
+        print("Discord(Spamming me causes to block you from support): nikegamerjjjj#8874")
+        print("Github: Nikegamerjjjj(Use issue report function in repo)")
         print("")
 
 
@@ -328,6 +333,7 @@ while True:
         print("Bug fixes from issues")
         print("Added abilty to Sell Soup with Meatballs.")
         print("Added Meat to Buy section")
+        print("Fixes for this summer June 2021")
         print("")
         print("")
         print("")
