@@ -1,5 +1,4 @@
 print("Loading all needed things, please show patient :)")
-import random#temporally
 print("...")
 import time
 def print_pause():
@@ -61,6 +60,8 @@ carrot_enough = False
 meat_enough = False
 coins = 0
 water = 120 #desiliters
+lasagna = 0
+baked_lasagna = 0
 potato = 1000 #grams
 carrot = 12 #12 carrots
 meat_packages = 0 # going to be 20 meat packages
@@ -68,19 +69,19 @@ meat_achivement = False
 soup = 0
 soup_with_meat = 0
 time.sleep(2)
-print("Hello and welcome to Cooking Game! v.0.5.1: Meat update(+ fixes for June)! (more info in info command)")
-input("click ENTER to continue...")
+print("Hello and welcome to Cooking Game! v.0.6: Lasagna is here! (more info in info command)")
+input("press Enter to continue...")
 print("What is your name or in this case nickname?")
 username = input("My nickname is... ")
 print("Hello " + username + ". Nice, now can we begin to cook!")
 print("Okay, We're ready!")
-input("click ENTER to continue...")
+input("press Enter to continue...")
 print("Lets begin with making some soup!")
-input("click ENTER to continue...")
+input("press Enter to continue...")
 print("In this game you have values of ingredients, meaning that you can't make very much food.")
-input("click ENTER to continue...")
+input("press Enter to continue...")
 print("But we should have it enough to make some Soup!")
-input("click ENTER to continue...")
+input("press Enter to continue...")
 
 while True:
     if water < 0:
@@ -105,6 +106,7 @@ while True:
            print("")
            print("")
     print("")
+    print("Good Joke: What is called Caveman's fart? Blast from past!")
     print("Hello, " + username + " ! What do you want to do now?")
     print("List of Coammands:      ")
     print("                   Recipes")
@@ -140,6 +142,8 @@ while True:
         print("                   You have ", coins, "coins")
         if meat_achivement == True:
             print("                   You have ", meat_packages, "meat packages")
+        print("                   You have ", lasagna, "lasagna's")
+        print("                   You have ", baked_lasagna, "baked lasagna's")
         print("                   Tip: If you have small amount of required amount of ingredients, you won't be able to make food!")
     if "make something" in command:
         print_pause()
@@ -147,6 +151,8 @@ while True:
         print("                   Soup")
         if meat_achivement == True:
             print("                   Soup With Meatballs")
+        elif lasagna >= 1:
+            print("                   Lasagna")
         make_something = input("                   ")
         if make_something == "soup":
             print("In order to make Soup, you need self write in amounts of ingrendients. If you don't remember you must check recipes!")
@@ -207,6 +213,23 @@ while True:
                 potato_enough = False
                 carrot_enough = False
                 meat_enough = False
+        elif lasagna >= 1:
+            if "lasagna" in make_something:
+                print("You are lucky to buy Lasagna! It costed you much...")
+                input("press Enter to continue...")
+                print("All you need is to say Yes or Y to make that lasagna...")
+                lasagna_accept = input("Write yes/y or no/n: ")
+                if "y" or "yes" in lasagna_accept:
+                    print("Well you did it. But you lose whole 20 Desilliters of water... :|")
+                    input("press Enter to continue...")
+                    water -= 20
+                    baked_lasagna += 1
+                    print("- You made 1 Baked Lasagna -")
+                if "n" or "no" in lasagna_accept:
+                    print("Well you won't regret next time...")
+                    input("Press That Enter button to Continue!!!!!!")
+
+
         else:
             continue
     if "market" in command:
@@ -274,11 +297,13 @@ while True:
                 print("Carrots, 6 sticks: 7 coins")
                 if meat_achivement == True:
                     print("Meat, 4 packages: 5 coins")
+                print("Lasagna, 1: 50 coins(being rich to buy this recommended)")
                 time.sleep(3)
                 print("Write in commands below what you want to buy:")
                 print("Water")
                 print("Potato")
                 print("Carrot")
+                print("Lasagna")
                 if meat_achivement == True:
                     print("Meat")
                 buy_commands = input()
@@ -299,6 +324,10 @@ while True:
                         print("Adding 4 meat packages, minus 5 coins")
                         meat_packages += 4
                         coins -= 5
+                elif "lasagna" in buy_commands:
+                    print("Adding 1 lasagna, minus 50 coins(JESUS!)")
+                    lasagna += 1
+                    coins -= 50
 
     elif "info" in command:
         print_pause()
@@ -322,18 +351,14 @@ while True:
 
     elif "update" in command or "log" in command:
         print_pause()
-        print("Update: Meat update! ")
+        print("Update: Lasanga! ")
         print("")
-        print("Version: v.0.5")
+        print("Version: v.0.6")
         print("")
         print("New:")
         print("")
-        print("Added Meat back!")
-        print("Added Soup with Meatballs, in recipes now!")
-        print("Bug fixes from issues")
-        print("Added abilty to Sell Soup with Meatballs.")
-        print("Added Meat to Buy section")
-        print("Fixes for this summer June 2021")
+        print("Added Lasagna!")
+        print("You will find it as your worst nightmare, when you buy!")
         print("")
         print("")
         print("")
@@ -344,4 +369,4 @@ while True:
 
 
 
-#Now on Github!
+#What is called Caveman's fart? Blast from past!

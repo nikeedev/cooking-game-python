@@ -324,7 +324,7 @@ while True:
         print_pause()
         print("Update: Meat update! ")
         print("")
-        print("Version: v.0.5")
+        print("Version: v.0.5.2")
         print("")
         print("New:")
         print("")
