@@ -68,8 +68,12 @@ meat_packages = 0 # going to be 20 meat packages
 meat_achivement = False
 soup = 0
 soup_with_meat = 0
+level = 0
+xp = 0
+xp_need = 100
+xp_rest = 0
 time.sleep(2)
-print("Hello and welcome to Cooking Game! v.0.6: Lasagna is here! (more info in info command)")
+print("Hello and welcome to Cooking Game! v.0.6.1: Levels! (more info in info command)")
 input("press Enter to continue...")
 print("What is your name or in this case nickname?")
 username = input("My nickname is... ")
@@ -84,6 +88,13 @@ print("But we should have it enough to make some Soup!")
 input("press Enter to continue...")
 
 while True:
+    if xp > xp_need:
+        print("")
+        print(f"- New level achived! Level {level}, {xp} / {xp_need}")
+        xp_rest = xp - xp_need
+        xp = xp_rest 
+        level += 1
+        xp_rest = 0
     if water < 0:
         water = 0
     if potato < 0:
@@ -106,7 +117,6 @@ while True:
            print("")
            print("")
     print("")
-    print("Good Joke: What is called Caveman's fart? Blast from past!")
     print("Hello, " + username + " ! What do you want to do now?")
     print("List of Coammands:      ")
     print("                   Recipes")
@@ -144,6 +154,7 @@ while True:
             print("                   You have ", meat_packages, "meat packages")
         print("                   You have ", lasagna, "lasagna's")
         print("                   You have ", baked_lasagna, "baked lasagna's")
+        print("                   Your level is: Level: ", level, ". XP to next level is: ", xp, " / ", xp_need)
         print("                   Tip: If you have small amount of required amount of ingredients, you won't be able to make food!")
     if "make something" in command:
         print_pause()
@@ -170,8 +181,9 @@ while True:
                 carrot_enough = True
             if water_enough == True and potato_enough == True and carrot_enough == True:
                 print("Yeah! All ingredients is here! You succesfully made some Soup!")
-                print("- You got 1 Soup! It lies in inventory now -")
+                print("- You got 1 Soup! It lies in inventory now, +10 XP -")
                 soup = soup + 1
+                xp += 10
             else:
                 print("You can't make soup, because you dont have enough ingredients!")
                 print("You have " + water + ", instead of 10 desiliters!")
@@ -201,8 +213,9 @@ while True:
                     meat_enough = True
                 if water_enough == True and potato_enough == True and carrot_enough == True and meat_enough == True:
                     print("Yeah! All ingredients is here! You succesfully made some Soup!")
-                    print("- You got 1 Soup with Meatballs! It lies in inventory now -")
+                    print("- You got 1 Soup with Meatballs! It lies in inventory now, +15 XP -")
                     soup_with_meat += 1
+                    xp += 15
                 else:
                     print("You can't make soup, because you dont have enough ingredients!")
                     print("You have now " + water + " dl of water, instead of 12 desiliters!")
@@ -351,14 +364,14 @@ while True:
 
     elif "update" in command or "log" in command:
         print_pause()
-        print("Update: Lasanga! ")
+        print("Update: Levels and XP! ")
         print("")
-        print("Version: v.0.6")
+        print("Version: v.0.6.1")
         print("")
         print("New:")
         print("")
-        print("Added Lasagna!")
-        print("You will find it as your worst nightmare, when you buy!")
+        print("Added Levels And XP!")
+        print("You Earn Them By Making Food.")
         print("")
         print("")
         print("")
