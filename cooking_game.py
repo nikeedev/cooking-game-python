@@ -345,10 +345,10 @@ while True:
     elif "info" in command:
         print_pause()
         print("Cooking Game®")
-        print("Made by Nikegamerjjjj(Nikita)")
+        print("Made by nikeedev(Nikita)")
         print("Copyright ©2021")
         print("This game is made completly by hand, and no turtorials have been used.")
-        print("Game code can be changed, but without asking owner(nikegamerjjjj),")
+        print("Game code can be changed, but without asking owner(nikeedev),")
         print("you are not following rules and may cause in problems.")
         print(" ")
         print(" ")
@@ -356,8 +356,8 @@ while True:
         print(" ")
         print(" ")
         print("Contact me here:")
-        print("Discord(Spamming me causes to block you from support): nikegamerjjjj#8874")
-        print("Github: Nikegamerjjjj(Use issue report function in repo)")
+        print("Discord(Spamming me causes to block you from support): nikeedev#8874")
+        print("Github: nikeedev(Use issue report function in repo)")
         print("")
 
 
