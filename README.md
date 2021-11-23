@@ -5,8 +5,8 @@
 
 
 ## Requirements:
-** Python 3.9.x and later or Python 3.10.x and later
-Download: https://www.python.org/downloads/
+These Python versions: [![Python](https://img.shields.io/badge/python-3.8%20%7C%203.9%20%7C%203.10-blue)](https://python.org/)
+Download them from here: https://www.python.org/downloads/
 **
 //
 
