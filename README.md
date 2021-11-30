@@ -5,7 +5,7 @@
 
 
 ## Requirements:
-These Python versions: [![Python](https://img.shields.io/badge/python-3.8%20%7C%203.9%20%7C%203.10-blue)](https://python.org/)
+These Python versions: [![Python](https://img.shields.io/badge/python-3.9%20%7C%203.10-lime)](https://python.org/)
 Download them from here: https://www.python.org/downloads/
 **
 //
