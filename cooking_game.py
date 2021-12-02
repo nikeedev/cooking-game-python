@@ -433,7 +433,7 @@ while True:
                         flour += 200
                         coins -= 8
                     elif "oil" in buy_commands:
-                        print("Adding 12 desiliters, minus 12 coins")
+                        print("Adding 12 desiliters oil, minus 12 coins")
                         oil += 12
                         coins -= 12
  
@@ -459,7 +459,7 @@ while True:
 
     elif "update" in command or "log" in command:
         os.system("cls")
-        print("Update: New ! ")
+        print("Update: New! ")
         print("")
         print("Version: v.0.6.1")
         print("")
