@@ -55,6 +55,7 @@ import time, os, getpass
     print(" ")
     print(" ")
 """
+from about import *
 water_enough = False
 potato_enough = False
 carrot_enough = False
@@ -80,6 +81,8 @@ xp_rest = 0
 bread_achivement = False
 flour = 5000 #grams
 oil = 100 #desiliters
+
+
 time.sleep(2)
 print("Hello and welcome to Cooking Game! v.0.6.3! New Recipe (more info in info command)")
 input("press Enter to continue...")
@@ -433,43 +436,17 @@ while True:
                         flour += 200
                         coins -= 8
                     elif "oil" in buy_commands:
-                        print("Adding 12 desiliters oil, minus 12 coins")
+                        print("Adding 12 desiliters, minus 12 coins")
                         oil += 12
                         coins -= 12
  
     elif "info" in command:
-        os.system("cls")
-        print("Cooking Game®")
-        print("Made by nikeedev(Nikita)")
-        print("Copyright ©2021")
-        print("This game is made completly by hand, and no turtorials have been used.")
-        print("Game code can be changed, but without asking owner(nikeedev),")
-        print("you are not following rules and may cause in problems.")
-        print(" ")
-        print(" ")
-        print(" ")
-        print(" ")
-        print(" ")
-        print("Contact me here:")
-        print("Discord(Spamming me causes to block you from support): nikeedev#8874")
-        print("Github: nikeedev(Use issue report function in repo)")
-        print("")
+        info()
 
 
 
     elif "update" in command or "log" in command:
-        os.system("cls")
-        print("Update: New! ")
-        print("")
-        print("Version: v.0.6.1")
-        print("")
-        print("New:")
-        print("")
-        print("Added Levels And XP!")
-        print("You Earn Them By Making Food.")
-        print("")
-        print("")
-        print("")
+        update()
 
 
     else:
