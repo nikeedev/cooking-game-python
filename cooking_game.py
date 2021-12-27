@@ -152,11 +152,11 @@ while True:
     print("Hello, " + username + " ! What do you want to do now?")
     print("List of Commands:      ")
     print("                   Recipes")
-    print("                   Inventory")
-    print("                   Make something")
+    print("                   Inventory (Check your storage, XP and cooked food)")
+    print("                   Cook (You will begin to make food)")
     print("                   Market(Sell and Buy food)")
     print("                   Info")
-    print("                   Update Log")
+    print("                   Update (or) Log")
     command = input("                   ")
     if "recipe" in command:
         os.system("cls")
@@ -199,7 +199,7 @@ while True:
         print("                   Your level is: Level: ", level, ". XP to next level is: ", xp, " / ", xp_need)
         print(
             "                   Tip: If you have small amount of required amount of ingredients, you won't be able to make food!")
-    if "make something" in command:
+    if "cook" in command:
         os.system("cls")
         print("                   Write name of any food above:")
         print("                   Soup")
