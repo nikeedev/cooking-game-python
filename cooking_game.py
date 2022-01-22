@@ -190,6 +190,9 @@ while True:
             water_enough = False
             potato_enough = False
             carrot_enough = False
+            soup_water = 0
+            soup_potato = 0
+            soup_carrot = 0
         elif meat_achivement:
             if make_something == "soup with meat":
                 print(
@@ -225,6 +228,10 @@ while True:
                 potato_enough = False
                 carrot_enough = False
                 meat_enough = False
+            soup_water = 0
+            soup_potato = 0
+            soup_carrot = 0
+            soup_meat = 0
         elif lasagna >= 1:
             if "lasagna" in make_something:
                 print("You are lucky to buy Lasagna! It costed you much...")
