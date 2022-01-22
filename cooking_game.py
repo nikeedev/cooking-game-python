@@ -184,9 +184,9 @@ while True:
                 xp += 10
             else:
                 print("You can't make soup, because you don't have enough ingredients!")
-                print("You used " + water + ", instead of 10 deciliters!")
-                print("You used " + potato + ", instead of 200 grams!")
-                print("You used " + carrot + ", instead of 3 carrots!")
+                print("You used ", water, ", instead of 10 deciliters!")
+                print("You used ", potato, ", instead of 200 grams!")
+                print("You used ", carrot, ", instead of 3 carrots!")
             water_enough = False
             potato_enough = False
             carrot_enough = False
@@ -217,10 +217,10 @@ while True:
                     xp += 15
                 else:
                     print("You can't make soup, because you don't have enough ingredients!")
-                    print("You used " + water + " dl of water, instead of 12 deciliters!")
-                    print("You used " + potato + " grams of potatoes, instead of 200 grams!")
-                    print("You used " + carrot + " sticks of carrots, instead of 3 carrots!")
-                    print("You used " + meat_packages + " meat packages, instead of 2 packages")
+                    print("You used ", water, " dl of water, instead of 12 deciliters!")
+                    print("You used ", potato, " grams of potatoes, instead of 200 grams!")
+                    print("You used ", carrot, " sticks of carrots, instead of 3 carrots!")
+                    print("You used ", meat_packages, " meat packages, instead of 2 packages")
                 water_enough = False
                 potato_enough = False
                 carrot_enough = False
@@ -263,9 +263,9 @@ while True:
                     xp += 20
                 else:
                     print("You can't make Bread, because you don't have enough ingredients!")
-                    print("You used " + water + " dl of water, instead of 5 deciliters!")
-                    print("You used " + flour + " grams of flour, instead of 200 grams!")
-                    print("You used " + oil + " dl of oil, instead of 1 deciliters!")
+                    print("You used ", water, " dl of water, instead of 5 deciliters!")
+                    print("You used ", flour, " grams of flour, instead of 200 grams!")
+                    print("You used ", oil, " dl of oil, instead of 1 deciliters!")
                 water_enough = False
                 flour_enough = False
                 oil_enough = False
@@ -403,7 +403,7 @@ while True:
 
     if "boosts" in command:
         clearConsole()
-        print("Boosts!")
+        print("\n\nBoosts!")
         print(" Currently under construction! Come back later!")
         """
         print("\n List of Boosts commands:")
