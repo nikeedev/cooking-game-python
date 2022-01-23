@@ -128,7 +128,7 @@ while True:
         if bread_achivement:
             print("                   Bread:")
             print("                         Water: 5 Deciliters")
-            print("                         Flour: 200 grams")
+            print("                         Flour: 2 Deciliters")
             print("                         Oil: 1 Deciliters")
 
     if "inventory" in command:
@@ -138,16 +138,18 @@ while True:
         print("                   You have ", carrot, " carrots")
         print("                   You have ", soup, "soup")
         if meat_achivement:
-            print("                   You have ", soup_with_meat, "soup with meatballs")
-        print("                   You have ", coins, "coins")
-        if meat_achivement:
             print("                   You have ", meat_packages, "meat packages")
+            print("                   You have ", soup_with_meat, "soup with meatballs")
+
         if bread_achivement:
-            print("                   Soup With Meatballs:")
-            print("                         You have", flour, "grams of flour")
+            print("                         You have", water, " deciliters of water")
+            print("                         You have", flour, " deciliters of flour")
             print("                         You have ", oil, " deciliters of oil")
+            print("                         You have ", bread, " bread")
+
         print("                   You have ", lasagna, "lasagna's")
         print("                   You have ", baked_lasagna, "baked lasagna's\n")
+        print("\n \n                   You have ", coins, "coins")
         print("                   Your level is: Level: ", level, ". XP to next level is: ", xp, " / ", xp_need)
         print(
             "                   Tip: If you have small amount of required amount of ingredients, you won't be able to make food!")
@@ -184,9 +186,9 @@ while True:
                 xp += 10
             else:
                 print("You can't make soup, because you don't have enough ingredients!")
-                print("You used ", soup_water, ", instead of 10 deciliters!")
-                print("You used ", soup_potato, ", instead of 200 grams!")
-                print("You used ", soup_carrot, ", instead of 3 carrots!")
+                print("You used ", soup_water, "dl, instead of 10 deciliters!")
+                print("You used ", soup_potato, " grams, instead of 200 grams!")
+                print("You used ", soup_carrot, " sticks of carrots, instead of 3 carrots!")
             water_enough = False
             potato_enough = False
             carrot_enough = False
@@ -220,7 +222,7 @@ while True:
                     xp += 15
                 else:
                     print("You can't make soup, because you don't have enough ingredients!")
-                    print("You used ", soup_water, " dl of water, instead of 12 deciliters!")
+                    print("You used ", soup_water, "dl of water, instead of 12 deciliters!")
                     print("You used ", soup_potato, " grams of potatoes, instead of 200 grams!")
                     print("You used ", soup_carrot, " sticks of carrots, instead of 3 carrots!")
                     print("You used ", soup_meat, " meat packages, instead of 2 packages")
@@ -252,12 +254,12 @@ while True:
                 print(
                     "In order to make Bread, you need self write in amounts of ingredients. If you don't remember you must check recipes!")
                 bread_water = int(input("Write deciliters of water you want to add: "))
-                bread_flour = int(input("Write grams of flour you want to add: "))
+                bread_flour = int(input("Write deciliters of flour you want to add: "))
                 bread_oil = int(input("Write deciliters of oil you want to add: "))
                 if bread_water >= 5:
                     water = water - bread_water
                     water_enough = True
-                if bread_flour >= 200:
+                if bread_flour >= 2:
                     flour = flour - bread_flour
                     flour_enough = True
                 if bread_oil >= 1:
@@ -270,9 +272,9 @@ while True:
                     xp += 20
                 else:
                     print("You can't make Bread, because you don't have enough ingredients!")
-                    print("You used ", bread_water, " dl of water, instead of 5 deciliters!")
-                    print("You used ", bread_flour, " grams of flour, instead of 200 grams!")
-                    print("You used ", bread_oil, " dl of oil, instead of 1 deciliters!")
+                    print("You used ", bread_water, "dl of water, instead of 5 deciliters!")
+                    print("You used ", bread_flour, "dl of flour, instead of 2 deciliters!")
+                    print("You used ", bread_oil, "dl of oil, instead of 1 deciliters!")
                 water_enough = False
                 flour_enough = False
                 oil_enough = False
@@ -282,6 +284,7 @@ while True:
 
         else:
             continue
+
     if "market" in command:
         clearConsole()
         print("Welcome to The Market!")
