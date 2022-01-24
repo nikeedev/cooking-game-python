@@ -69,7 +69,7 @@ while True:
         xp = xp_rest
         level += 1
         xp_rest = 0
-        xp_need *= 1.10
+        xp_need *= 1.15
         print("")
         print(f"- New level achieved! - Level {level}, XP {xp} / {xp_need}")
     if water < 0:
