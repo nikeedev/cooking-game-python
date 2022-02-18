@@ -2,6 +2,8 @@ print("Loading all needed things, please show patient :)")
 print("...")
 import time, os, getpass
 from about import *
+
+
 def clearConsole():
     command = 'clear'
     if os.name in ('nt', 'dos'):  # If Machine is running on Windows, use cls
@@ -443,7 +445,7 @@ while True:
     elif "update" in command or "log" in command:
         clearConsole()
         update()
-        
+
 
     elif "exit" in command:
         exit()
@@ -451,4 +453,3 @@ while True:
 
     else:
         continue
-
