@@ -1,6 +1,7 @@
 print("Loading all needed things, please show patient :)")
 print("...")
 import time, os, getpass
+from about import *
 
 
 def clearConsole():
@@ -56,7 +57,7 @@ print("Okay, We're ready!")
 input("press Enter to continue...")
 print("Lets begin with making some soup!")
 input("press Enter to continue...")
-print("In this game You used values of ingredients, meaning that you can't make very much food.")
+print("In this game you have desired values of ingredients in recipes, meaning that you can't make very much food, if you dont have enough ingredients.")
 input("press Enter to continue...")
 print("But we should have it enough to make some Soup!")
 input("press Enter to continue...")
@@ -70,7 +71,7 @@ while True:
         xp = xp_rest
         level += 1
         xp_rest = 0
-        xp_need *= 1.10
+        xp_need *= 1.15
         print("")
         print(f"- New level achieved! - Level {level}, XP {xp} / {xp_need}")
     if water < 0:
@@ -109,6 +110,7 @@ while True:
     print("                   Boosts (Buy and list your boosts!) ( Write 'boosts' )")
     print("                   Info ( Write 'info' )")
     print("                   Update Log ( Write 'update' or 'log' )")
+    print("                   Exit ( Write 'exit' ) ")
     command = input("                   ")
     if "recipe" in command:
         clearConsole()
@@ -436,37 +438,17 @@ while True:
         """
     elif "info" in command:
         clearConsole()
-        print("Cooking Game®")
-        print("Made by nikeedev(Nikita)")
-        print("Copyright ©2022")
-        print("This game is made completely by hand, and no tutorials have been used.")
-        print("Game code can be changed, but without asking owner(nikeedev),")
-        print("you are not following rules and may cause in problems.")
-        print(" ")
-        print(" ")
-        print(" ")
-        print(" ")
-        print(" ")
-        print("Contact me here:")
-        print("Discord(Spamming me causes to block you from support): nikeedev#8874")
-        print("Github: nikeedev(Use issue report function in repo)")
-        print("")
+        info()
 
 
 
     elif "update" in command or "log" in command:
         clearConsole()
-        print("Update: Typos fixing")
-        print("")
-        print("Version: v.0.6.4")
-        print("")
-        print("New:")
-        print("")
-        print("Fixed typos, and words to make it easier for you to read!")
-        print(" (that wasn't small sentence!) ")
-        print("")
-        print("")
-        print("")
+        update()
+
+
+    elif "exit" in command:
+        exit()
 
 
     else:
