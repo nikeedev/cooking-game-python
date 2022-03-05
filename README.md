@@ -21,4 +21,5 @@ Clone the repo to your desired place or download code from GitHub(basically here
 --------------------
 # Additional info:
 
-Use website https://github.com/Nikegamerjjjj/cooking-game/issues to send issues, bugs and problems you find inside the game. Use also https://github.com/Nikegamerjjjj/cooking-game/discussions for ideas and such.
+Use website https://github.com/nikeedev/cooking-game-python/issues to send issues, bugs and problems you find inside the game. 
+Use also https://github.com/nikeedev/cooking-game-python/discussions for ideas and such.
