@@ -101,7 +101,7 @@ while True:
             print("")
             print("")
     print("")
-    print("Hello, " + username + "! What do you want to do now?")
+    print("Hello + " + username + "! What do you want to do now?")
     print("List of Commands:      ")
     print("                   Recipes ( Write 'recipe' ) ")
     print("                   Inventory ( Write 'inventory' )")
@@ -135,24 +135,24 @@ while True:
 
     if "inventory" in command:
         clearConsole()
-        print("                   You have ", water, " deciliters of water")
-        print("                   You have ", potato, " grams of potato")
-        print("                   You have ", carrot, " carrots")
-        print("                   You have ", soup, "soup")
+        print("                   You have " + water + " deciliters of water")
+        print("                   You have " + potato + " grams of potato")
+        print("                   You have " + carrot + " carrots")
+        print("                   You have " + soup + " soup")
         if meat_achivement:
-            print("                   You have ", meat_packages, "meat packages")
-            print("                   You have ", soup_with_meat, "soup with meatballs")
+            print("                   You have " + meat_packages + " meat packages")
+            print("                   You have " + soup_with_meat + " soup with meatballs")
 
         if bread_achivement:
-            print("                         You have", water, " deciliters of water")
-            print("                         You have", flour, " deciliters of flour")
-            print("                         You have ", oil, " deciliters of oil")
-            print("                         You have ", bread, " bread")
+            print("                         You have" + water + " deciliters of water")
+            print("                         You have" + flour + " deciliters of flour")
+            print("                         You have " + oil + " deciliters of oil")
+            print("                         You have " + bread + " bread")
 
-        print("                   You have ", lasagna, "lasagna's")
-        print("                   You have ", baked_lasagna, "baked lasagna's\n")
-        print("\n \n                   You have ", coins, "coins")
-        print("                   Your level is: Level: ", level, ". XP to next level is: ", xp, " / ", xp_need)
+        print("                   You have " + lasagna + " lasagna's")
+        print("                   You have " + baked_lasagna + " baked lasagna's\n")
+        print("\n \n                   You have " + coins + " coins")
+        print("                   Your level is: Level: " + level + ". XP to next level is: " + xp + " / " + xp_need)
         print(
             "                   Tip: If you have small amount of required amount of ingredients, you won't be able to make food!")
     if "make something" in command:
@@ -188,9 +188,9 @@ while True:
                 xp += 10
             else:
                 print("You can't make soup, because you don't have enough ingredients!")
-                print("You used ", soup_water, "dl, instead of 10 deciliters!")
-                print("You used ", soup_potato, " grams, instead of 200 grams!")
-                print("You used ", soup_carrot, " sticks of carrots, instead of 3 carrots!")
+                print("You used " + soup_water + "dl, instead of 10 deciliters!")
+                print("You used " + soup_potato + " grams, instead of 200 grams!")
+                print("You used " + soup_carrot + " sticks of carrots, instead of 3 carrots!")
             water_enough = False
             potato_enough = False
             carrot_enough = False
@@ -224,10 +224,10 @@ while True:
                     xp += 15
                 else:
                     print("You can't make soup, because you don't have enough ingredients!")
-                    print("You used ", soup_water, "dl of water, instead of 12 deciliters!")
-                    print("You used ", soup_potato, " grams of potatoes, instead of 200 grams!")
-                    print("You used ", soup_carrot, " sticks of carrots, instead of 3 carrots!")
-                    print("You used ", soup_meat, " meat packages, instead of 2 packages")
+                    print("You used " + soup_water + "dl of water, instead of 12 deciliters!")
+                    print("You used " + soup_potato + " grams of potatoes, instead of 200 grams!")
+                    print("You used " + soup_carrot + " sticks of carrots, instead of 3 carrots!")
+                    print("You used " + soup_meat + " meat packages, instead of 2 packages")
                 water_enough = False
                 potato_enough = False
                 carrot_enough = False
@@ -274,9 +274,9 @@ while True:
                     xp += 20
                 else:
                     print("You can't make Bread, because you don't have enough ingredients!")
-                    print("You used ", bread_water, "dl of water, instead of 5 deciliters!")
-                    print("You used ", bread_flour, "dl of flour, instead of 2 deciliters!")
-                    print("You used ", bread_oil, "dl of oil, instead of 1 deciliters!")
+                    print("You used " + bread_water + "dl of water, instead of 5 deciliters!")
+                    print("You used " + bread_flour + "dl of flour, instead of 2 deciliters!")
+                    print("You used " + bread_oil + "dl of oil, instead of 1 deciliters!")
                 water_enough = False
                 flour_enough = False
                 oil_enough = False
@@ -312,11 +312,11 @@ while True:
                 time.sleep(2)
                 print("Prices on foods change after time(after updates), so be in right time to get much coins!")
                 time.sleep(3)
-                print("You can sell ", soup, " soup.")
+                print("You can sell " + soup + " soup.")
                 if meat_achivement:
-                    print("You can sell ", soup_with_meat, " soup with meatballs.")
+                    print("You can sell " + soup_with_meat + " soup with meatballs.")
                 if bread_achivement:
-                    print("You can sell ", bread, " bread.")
+                    print("You can sell " + bread + " bread.")
                 time.sleep(2)
                 print("If you want to sell write: name of food you want to sell.")
                 sell_command = input()
@@ -427,13 +427,18 @@ while True:
         print("                          Exit")
         boosts_commands = input()
         
-        if "list" in commands:
-            
+        if "list" in boosts_commands:
+            print("Under Development")
+        
+        if coins != 0:
+            elif "buy" in boosts_commands:
+                print("Under Development")
         
         elif "exit" in boosts_commands:
+            print("Exiting...")
             continue
-        if coins != 0:
-            if "buy" in boosts_commands:
+        
+            
         else
         """
     elif "info" in command:
