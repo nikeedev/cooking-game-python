@@ -10,6 +10,7 @@ def clearConsole():
         command = 'cls'
     os.system(command)
 
+VersionNow = "0.6.4"
 
 username = ""
 water_enough = False
@@ -38,7 +39,7 @@ bread_achivement = False
 flour = 5000  # grams
 oil = 100  # deciliters
 time.sleep(2)
-print("Hello and welcome to Cooking Game! v.0.6.4! New: Typo Fixing (more info in 'log' command)")
+print("Hello and welcome to Cooking Game! v"+ VersionNow +"! New: Typo Fixing (more info in 'log' command)")
 input("press Enter to continue...")
 while use_username:
     print("\n\nWhat is your name or in this case nickname?")
@@ -419,6 +420,8 @@ while True:
     if "boosts" in command:
         clearConsole()
         print("\n\nBoosts!")
+
+        """
         print(" Currently under construction! Come back later!")
         """
         print("\n List of Boosts commands:")
@@ -431,16 +434,16 @@ while True:
             print("Under Development")
         
         if coins != 0:
-            elif "buy" in boosts_commands:
+            if "buy" in boosts_commands:
                 print("Under Development")
         
         elif "exit" in boosts_commands:
             print("Exiting...")
             continue
         
-            
-        else
-        """
+        else:
+            continue 
+        
     elif "info" in command:
         clearConsole()
         info()

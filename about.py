@@ -1,3 +1,5 @@
+from cooking_game import VersionNow
+
 def info():
     print("Cooking Game®")
     print("Made by nikeedev(Nikita)")
@@ -19,7 +21,7 @@ def info():
 def update():
     print("Update: Typos fixing")
     print("")
-    print("Version: v.0.6.4")
+    print("Version: v"+ VersionNow)
     print("")
     print("New:")
     print("")
