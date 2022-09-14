@@ -1,4 +1,5 @@
-from cooking_game import VersionNow
+
+version = "0.6.4"
 
 def info():
     print("Cooking Game®")
@@ -21,7 +22,7 @@ def info():
 def update():
     print("Update: Typos fixing")
     print("")
-    print("Version: v"+ VersionNow)
+    print("Version: v"+ version)
     print("")
     print("New:")
     print("")

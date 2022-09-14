@@ -10,8 +10,6 @@ def clearConsole():
         command = 'cls'
     os.system(command)
 
-VersionNow = "0.6.4"
-
 username = ""
 water_enough = False
 potato_enough = False
@@ -27,7 +25,7 @@ baked_lasagna = 0
 potato = 1000  # grams
 carrot = 12  # 12 carrots
 meat_packages = 0  # going to be 20 meat packages
-meat_achivement = False
+meat_achievement = False
 soup = 0
 soup_with_meat = 0
 bread = 0
@@ -35,11 +33,12 @@ level = 0
 xp = 0
 xp_need = 100
 xp_rest = 0
-bread_achivement = False
+bread_achievement = False
 flour = 5000  # grams
 oil = 100  # deciliters
 time.sleep(2)
-print("Hello and welcome to Cooking Game! v"+ VersionNow +"! New: Typo Fixing (more info in 'log' command)")
+
+print("Hello and welcome to Cooking Game! v"+ version +"! New: Typo Fixing (more info in 'log' command)")
 input("press Enter to continue...")
 while use_username:
     print("\n\nWhat is your name or in this case nickname?")
@@ -65,8 +64,8 @@ input("press Enter to continue...")
 
 while True:
     if xp == 2:
-        print("You achieved 'Bread Achivement'! You can now make bread!")
-        bread_achivement = True
+        print("You achieved 'Bread Achievement'! You can now make bread!")
+        bread_achievement = True
     if xp > xp_need:
         xp_rest = xp - xp_need
         xp = xp_rest
@@ -89,12 +88,12 @@ while True:
         oil = 0
     if meat_packages < 0:
         meat_packages = 0
-    if not meat_achivement:
+    if not meat_achievement:
         if soup == 2:
             print("")
             print("")
             print("")
-            meat_achivement = True
+            meat_achievement = True
             print(
                 "You got Meat achievement, which means you can have meat in inventory, and you're able to make new Soup type!")
             meat_packages += 20
@@ -122,13 +121,13 @@ while True:
         print("                         Potato: 200 grams")
         print("                         Carrots: 3")
         print("                         ")
-        if meat_achivement:
+        if meat_achievement:
             print("                   Soup With Meatballs:")
             print("                         Water: 12 Deciliters")
             print("                         Potato: 200 grams")
             print("                         Carrots: 3")
             print("                         Meat Packages: 2")
-        if bread_achivement:
+        if bread_achievement:
             print("                   Bread:")
             print("                         Water: 5 Deciliters")
             print("                         Flour: 2 Deciliters")
@@ -140,11 +139,11 @@ while True:
         print("                   You have " + potato + " grams of potato")
         print("                   You have " + carrot + " carrots")
         print("                   You have " + soup + " soup")
-        if meat_achivement:
+        if meat_achievement:
             print("                   You have " + meat_packages + " meat packages")
             print("                   You have " + soup_with_meat + " soup with meatballs")
 
-        if bread_achivement:
+        if bread_achievement:
             print("                         You have" + water + " deciliters of water")
             print("                         You have" + flour + " deciliters of flour")
             print("                         You have " + oil + " deciliters of oil")
@@ -160,11 +159,11 @@ while True:
         clearConsole()
         print("                   Write name of any food above:")
         print("                   Soup")
-        if meat_achivement:
+        if meat_achievement:
             print("                   Soup With Meatballs")
         elif lasagna >= 1:
             print("                   Lasagna")
-        elif bread_achivement:
+        elif bread_achievement:
             print("                   Bread")
         make_something = input("                   ")
         if make_something == "soup":
@@ -198,7 +197,7 @@ while True:
             soup_water = 0
             soup_potato = 0
             soup_carrot = 0
-        elif meat_achivement:
+        elif meat_achievement:
             if make_something == "soup with meat":
                 print(
                     "In order to make Soup with Meatballs, you need self write in amounts of ingredients. If you don't remember you must check recipes!")
@@ -252,7 +251,7 @@ while True:
                 if "n" or "no" in lasagna_accept:
                     print("Well you won't regret next time...")
                     input("Press That Enter button to Continue!!!!!!")
-        elif bread_achivement:
+        elif bread_achievement:
             if make_something == "bread":
                 print(
                     "In order to make Bread, you need self write in amounts of ingredients. If you don't remember you must check recipes!")
@@ -314,9 +313,9 @@ while True:
                 print("Prices on foods change after time(after updates), so be in right time to get much coins!")
                 time.sleep(3)
                 print("You can sell " + soup + " soup.")
-                if meat_achivement:
+                if meat_achievement:
                     print("You can sell " + soup_with_meat + " soup with meatballs.")
-                if bread_achivement:
+                if bread_achievement:
                     print("You can sell " + bread + " bread.")
                 time.sleep(2)
                 print("If you want to sell write: name of food you want to sell.")
@@ -332,7 +331,7 @@ while True:
                         time.sleep(2)
                         print("You got 25 coins")
                         coins += 25
-                elif meat_achivement:
+                elif meat_achievement:
                     if "soup with meatballs" in sell_command:
                         print("One soup with meatballs could be sold for: 30 coins")
                         print("Want to sell 1 soup with meatballs for current price?")
@@ -344,7 +343,7 @@ while True:
                             time.sleep(2)
                             print("You got 30 coins")
                             coins += 30
-                if bread_achivement:
+                if bread_achievement:
                     if "bread" in sell_command:
                         print("One bread could be sold for: 35 coins")
                         print("Want to sell 1 bread for current price?")
@@ -368,10 +367,10 @@ while True:
                 print("Water, 20 deciliters: 10 coins")
                 print("Potato, 400 grams: 5 coins")
                 print("Carrots, 6 sticks: 7 coins")
-                if bread_achivement:
+                if bread_achievement:
                     print("Flour, 200 grams: 8 coins")
                     print("Oil, 12 deciliters: 10: coins")
-                if meat_achivement:
+                if meat_achievement:
                     print("Meat, 4 packages: 5 coins")
                 print("Lasagna, 1: 150 coins(being rich to buy this recommended)")
                 time.sleep(3)
@@ -380,10 +379,10 @@ while True:
                 print("Potato")
                 print("Carrot")
                 print("Lasagna")
-                if bread_achivement:
+                if bread_achievement:
                     print("Flour")
                     print("Oil")
-                if meat_achivement:
+                if meat_achievement:
                     print("Meat")
                 buy_commands = input()
                 if "water" in buy_commands:
@@ -398,7 +397,7 @@ while True:
                     print("Adding 6 carrots, minus 7 coins")
                     carrot += 6
                     coins -= 7
-                if meat_achivement:
+                if meat_achievement:
                     if "meat" in buy_commands:
                         print("Adding 4 meat packages, minus 5 coins")
                         meat_packages += 4
@@ -407,7 +406,7 @@ while True:
                     print("Adding 1 lasagna, minus 150 coins(JESUS!)")
                     lasagna += 1
                     coins -= 150
-                if bread_achivement:
+                if bread_achievement:
                     if "flour" in buy_commands:
                         print("Adding 200 grams flour, minus 8 coins")
                         flour += 200
@@ -433,9 +432,12 @@ while True:
         if "list" in boosts_commands:
             print("Under Development")
         
-        if coins != 0:
-            if "buy" in boosts_commands:
+        if "buy" in boosts_commands:
+            if coins != 0:
                 print("Under Development")
+            else:
+                print("You've got no money. But still, under development!")
+        
         
         elif "exit" in boosts_commands:
             print("Exiting...")
